@@ -52,3 +52,22 @@ A cada sprint de desenvolvimento, criamos novas branches de acordo com o padão 
 - `hotfix\descricao`
 
 Estas deverão ser mergeadas na **develop** e em após o desenvolvimento e entrega da release para a equipe de QA, faremos o merge para **staging**. Após a validação da equipe de QA, faremos a atualização da *master* e o sistema será atualizado em produção, seguindo a necessidade do negócio. 
+
+## Padronização de código
+
+### Backend
+- Utilizar sempre a Response padrão. Conforme exemplo abaixo:
+```
+{
+    "date": "2023-07-03T07:43:51.725391",
+    "message": "Operação realizada produz violação de uma restrição na base de dados",
+    "responseType": "ERROR",
+    "codeStatus": 409,
+    "reasonPhraseStatus": "Conflict",
+    "data": {
+        "code": "004-ERRO-RESTRICAO",
+        "description": "Operação realizada produz violação de uma restrição na base de dados"
+    }
+}
+```
+- Garantir a cobertuda de testes unitários nas camadas de Serviço e Controle e em caso de integração com outros serviços criar pelo menos teste de contrato.
