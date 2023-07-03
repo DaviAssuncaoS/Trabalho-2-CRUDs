@@ -28,8 +28,9 @@ Projeto para gerenciamento de produtos. Front: React/Next.js, Back: Java/SpringB
 
 ## Backend
 
-- `mvn clean install`
-- `mvn spring-boot:run`
+- `mvn clean install` Buildar projeto.
+- `docker compose up` Para subir a base de dados.
+- `mvn spring-boot:run` Rodar projeto.
 
 ## Frontend
 
