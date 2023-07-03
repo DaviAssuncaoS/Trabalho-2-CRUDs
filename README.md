@@ -9,6 +9,9 @@ Projeto para gerenciamento de produtos. Front: React/Next.js, Back: Java/SpringB
 - `Listagem de produtos`: Permite a listagem de todos os produtos previamente cadastrados.
 - `Cadastro de novos produtos`: Permite o cadastro de um novo produto.
 
+
+![](https://github.com/eliezerneto/productsapp/blob/main/salvarproduto.gif)
+
 # ✔️ Técnicas e tecnologias utilizadas
 ## Backend
 - ``Java 17``
