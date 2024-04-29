@@ -1,0 +1,21 @@
+<main class="main">
+    <section class="headerSection">
+        <h2>REGISTER THE PRODUCT:</h2>
+    </section>
+    <section class="registerSection">
+        <div class="productName">
+            <span>Product's name: </span><br>
+            <input nz-input placeholder="Type here" [disabled]="false" style="color: black;" [(ngModel)]="valueName" />
+        </div>
+        <div class="productDescription">
+            <span>Product Description: </span><br>
+            <input nz-input placeholder="Type here" [disabled]="false" style="color: black;"    
+                [(ngModel)]="valueDescription" />
+        </div>
+    </section>
+    <section class="footerSection">
+        <button nz-button nzType="default" (click)="sendProduct()">
+            <span nz-icon nzType="search"><span class="span-button">Send</span></span>
+        </button>
+    </section>
+</main>

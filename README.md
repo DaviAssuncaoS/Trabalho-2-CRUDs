@@ -2,15 +2,21 @@
 
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 
-Projeto para gerenciamento de produtos. Front: React/Next.js, Back: Java/SpringBoot.
+Projeto para gerenciamento de produtos. Front: Angular/Angular CLI, Back: Java/SpringBoot.
 
 # :hammer: Funcionalidades do projeto
 
 - `Listagem de produtos`: Permite a listagem de todos os produtos previamente cadastrados.
 - `Cadastro de novos produtos`: Permite o cadastro de um novo produto.
+- `Atualização de produtos`: Permite a atualização de um produto.
+- `Exclusão de produtos`: Permite a exclusão de um produto.
+
+- `Listagem de fornecedores`: Permite a listagem de todos os fornecedores previamente cadastrados.
+- `Cadastro de novos fornecedores`: Permite o cadastro de um novo fornecedores.
+- `Atualização de fornecedores`: Permite a atualização de um fornecedor.
+- `Exclusão de fornecedores`: Permite a exclusão de um fornecedor.
 
 
-![](https://github.com/eliezerneto/productsapp/blob/main/salvarproduto.gif)
 
 # ✔️ Técnicas e tecnologias utilizadas
 ## Backend
@@ -23,9 +29,9 @@ Projeto para gerenciamento de produtos. Front: React/Next.js, Back: Java/SpringB
 - ``Junit``
 
 ## Front
-- ``React.js``
-- ``Next.js``
-- ``Tailwind css``
+- ``Angular``
+- ``Angular CLI``
+- ``Less``
 
 # Como rodar o projeto ?
 
@@ -38,7 +44,7 @@ Projeto para gerenciamento de produtos. Front: React/Next.js, Back: Java/SpringB
 ## Frontend
 
 - `npm install`
-- `npm run dev`
+- `npm start`
 
 # Deseja contribuir ?
 
@@ -49,7 +55,7 @@ Branches principais:
 - `staging`
 - `develop`
 
-A cada sprint de desenvolvimento, criamos novas branches de acordo com o padão abaixo:
+A cada sprint de desenvolvimento, criamos novas branches de acordo com o padrão abaixo:
 
 - `feature\nome-da-feature`
 - `bugfix\descricao`

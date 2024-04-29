@@ -1,0 +1,43 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    flex-direction: column;
+}
+
+.headerSection {
+    margin: 20px;
+}
+
+.registerSection {
+    margin: 80px;
+    padding: 20px;
+}
+
+input {
+    width: 400px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+.span-button {
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+}

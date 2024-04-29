@@ -1,0 +1,28 @@
+<main class="main">
+    <section class="headerSection">
+        <h2>REGISTER YOURSELF:</h2>
+    </section>
+    <section class="registerSection">
+        <div class="supplierName">
+            <span>Provider's name: </span><br>
+            <input nz-input placeholder="Type here" [disabled]="false" style="color: black;" [(ngModel)]="valueName"/>
+        </div>
+        <div class="supplierAddress">
+            <span>Address: </span><br>
+            <input nz-input placeholder="Type here" [disabled]="false" style="color: black;" [(ngModel)]="valueAddress"/>
+        </div>
+        <div class="supplierContact">
+            <span>Contact: </span><br>
+            <input nz-input placeholder="Type here" [disabled]="false" style="color: black;" [(ngModel)]="valueContact"/>
+        </div>
+        <div class="supplierProduct">
+            <span>Product supplied: </span><br>
+            <input nz-input placeholder="Type here" [disabled]="false" style="color: black;" [(ngModel)]="valueProductSupplied"/>
+        </div>
+    </section>
+    <section class="footerSection">
+        <button nz-button nzType="primary" (click)="sendSupplier()">
+            <span nz-icon nzType="search"><span class="span-button">Send</span></span>
+        </button>
+    </section>
+</main>

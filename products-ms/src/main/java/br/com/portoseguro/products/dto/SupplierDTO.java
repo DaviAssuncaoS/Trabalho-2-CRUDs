@@ -11,11 +11,13 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class ProductDTO {
+public class SupplierDTO {
 
     private Long id;
     private String name;
-    private String description;
+    private String address;
+    private String contact;
+    private String productSupplied;
     private String barCode;
     private ProductType productType;
     private UnitMeasurement unitMeasurement;

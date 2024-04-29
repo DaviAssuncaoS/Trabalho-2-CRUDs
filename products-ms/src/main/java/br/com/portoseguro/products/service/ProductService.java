@@ -8,7 +8,6 @@ import br.com.portoseguro.products.exception.custom.BusinessException;
 import br.com.portoseguro.products.exception.custom.RecordNotFoundException;
 import br.com.portoseguro.products.mapper.ProductMapper;
 import br.com.portoseguro.products.repository.ProductRepository;
-import org.mapstruct.MappingTarget;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.data.domain.Page;
@@ -87,15 +86,15 @@ public class ProductService {
         return productMapper.toDto(productRepository.save(product));
     }
 
-    public void inactivateProduct(Long id) {
+    public void deleteProduct(Long id) {
 
-        Optional<Product> activeProduct = productRepository.findById(id);
+        Optional<Product> oldProduct = productRepository.findById(id);
 
-        if (!activeProduct.isPresent())
+        if (!oldProduct.isPresent())
             throw new RecordNotFoundException();
 
-        Product product = activeProduct.get();
-        product.setStatus(Status.DESATIVADO);
-        productRepository.save(product);
+        Product product = oldProduct.get();
+
+        productRepository.delete(product);
     }
 }

@@ -1,0 +1,34 @@
+<main class="main">
+    <section class="headerSection">
+        <h2>PRODUCT TABLE:</h2>
+    </section>
+    <section class="tableSection">
+        <table class="tableProducts">
+            <thead>
+                <tr>
+                    <th>Product's name</th>
+                    <th>Product Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>
+                        <div class="div-svg">
+                            <img src="/assets/iconEdit.webp" alt="icon edit" id="iconEdit"
+                                (click)="openChangeProducts(product.id)">
+                            <img src="/assets/iconExcluir.png" alt="icon delete" id="iconDelete"
+                                (click)="buttonDelete(product.id)" nz-button nzType="primary">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nz-modal [(nzVisible)]="isVisible" nzTitle="CONFIRMATION" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()"
+            [nzOkLoading]="isOkLoading">
+            <p *nzModalContent style="color: black;">ARE YOU SURE YOU WANT TO DELETE THIS PRODUCT?</p>
+        </nz-modal>
+    </section>
+</main>

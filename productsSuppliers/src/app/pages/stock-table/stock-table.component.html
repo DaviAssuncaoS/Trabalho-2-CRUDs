@@ -1,0 +1,38 @@
+<main class="main">
+    <section class="headerSection">
+        <h2>SUPPLIER TABLE:</h2>
+    </section>
+    <section class="tableSection">
+        <table class="tableSuppliers">
+            <thead>
+                <tr>
+                    <th>Provider's name</th>
+                    <th>Address</th>
+                    <th>Contact</th>
+                    <th>Product supplied</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let supplier of supplier">
+                    <td>{{ supplier.name }}</td>
+                    <td>{{ supplier.address }}</td>
+                    <td>{{ supplier.contact }}</td>
+                    <td>{{ supplier.productSupplied }}</td>
+                    <td>
+                        <div class="div-svg">
+                            <img src="/assets/iconEdit.webp" alt="icon edit" id="iconEdit"
+                                (click)="openChangeSuppliers(supplier.id)">
+                            <img src="/assets/iconExcluir.png" alt="icon delete" id="iconDelete"
+                                (click)="buttonDelete(supplier.id)">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nz-modal [(nzVisible)]="isVisible" nzTitle="CONFIRMATION" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()"
+            [nzOkLoading]="isOkLoading">
+            <p *nzModalContent style="color: black;">ARE YOU SURE YOU WANT TO DELETE THIS SUPPLIER?</p>
+        </nz-modal>
+    </section>
+</main>
